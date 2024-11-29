@@ -1,0 +1,43 @@
+{
+    "manifest_version": 3,
+    "name": "Pace",
+    "description": "Track your files!",
+    "version": "0.01",
+    "action": {
+        "default_popup": "popup/popup.html"
+    },
+    "icons": {
+        "128": "images/icon-128.png"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "sw.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*/*"
+            ],
+            "js": [
+                "pdfparse/content.js"
+            ],
+            "type": "module"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "resources": [
+                "pdfparse/pdf.js",
+                "pdfparse/pdf.worker.js"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('../fonts/Comfortaa.ttf');
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/Quicksand.ttf');
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../fonts/Orbitron.ttf');
+}
+
+:root {
+    --white: #FCFAFA;
+    --black: #2C2C34;
+    --grey: #494850;
+    --blue: #D8D8F6;
+    --purple: #B18FCF;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: var(--grey);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    border-radius: 2px;
+    margin: 1px;
+}
+
+html {
+    width: 350px;
+    height: 100%;
+    overflow: hidden;
+}
+
+div.last {
+    margin: 1rem;
+}
+
+h4 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.25rem;
+    color: var(--black);
+    font-weight: 500;
+    /* text-decoration: wavy underline; */
+    /* text-align: center; */
+
+}
+
+div.continue {
+    margin: 1rem;
+}
+
+.underline {
+    text-decoration: wavy underline;
+    text-decoration-thickness: 1px;
+    text-decoration-skip-ink: auto;
+    text-decoration-color: var(--black);
+    transition: text-decoration-color 0.5s ease-in-out;
+}
+
+.underline:hover {
+    text-decoration-color: blue;
+}
+
+div.border {
+    border: 1px solid var(--black);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+    transition: border 0.5s ease-in-out;
+
+}
+
+div.border:hover {
+    border: 1px solid blue;
+}
+
+.truncated {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Optional: set a fixed max-width or width to the element if needed */
+    max-width: 300px;
+    /* max-width: 100%; also works */
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    /* font-family: 'Comfortaa', sans-serif; */
+    font-size: 2.25rem;
+    color: var(--black);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+body {
+    font-family: 'Comfortaa', sans-serif;
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+
+
+/* Css Reset */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
